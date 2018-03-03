@@ -34,3 +34,7 @@ end
 Given("I provide invalid credentials") do
   OmniAuth.config.mock_auth[:spotify] = :invalid_credentials
 end
+
+Then("I should be redirected to {string} page") do |link|
+
+end
