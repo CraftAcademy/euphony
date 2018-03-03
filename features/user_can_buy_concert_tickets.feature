@@ -7,6 +7,5 @@ Scenario: User can buy tickets
     Given I am on the index page
     Then I click the button "Concert tickets"
     Then I should be on "Ticket sales" page
-    Then show me the page
     And I should see "Upcomming Concerts"
     Then I click "Buy tickets"
