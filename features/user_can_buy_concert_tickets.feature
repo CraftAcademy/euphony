@@ -8,4 +8,5 @@ Scenario: User can buy tickets
     Then I click the button "Concert tickets"
     Then I should be on "Ticket sales" page
     And I should see "Upcomming Concerts"
-    Then I click "Buy tickets"
+    Then I click "Buy ticket"
+    Then show me the page
