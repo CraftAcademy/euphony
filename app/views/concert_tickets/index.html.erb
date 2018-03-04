@@ -5,15 +5,20 @@
   <h2> The great stadium </h2>
   <h2> Tuesday 8:00 PM </h2>
   <h2> 300 SEK</h2>
-  <button type=“button” class=“btn btn-secondary”>Buy ticket</button>
+  <%= button_to cart_path(@user) do %>
+    <i type=“button” class=“btn btn-secondary”></i> Buy ticket
+  <% end %>
 </div>
+
 
 <div class="Overachievers">
   <h1> Overachievers </h1>
   <h2> The cool club </h2>
   <h2> Monday 6:00 PM </h2>
   <h2> 300 SEK</h2>
-  <button type=“button” class=“btn btn-secondary”>Buy ticket</button>
+  <%= button_to cart_path(@user) do %>
+    <i type=“button” class=“btn btn-secondary”></i> Buy ticket
+  <% end %>
 </div>
 
 <div class="Bandits">
@@ -21,7 +26,9 @@
   <h2> Laugardalshöll </h2>
   <h2> Friday 8:30 PM </h2>
   <h2> 300 SEK</h2>
-  <button type=“button” class=“btn btn-secondary”>Buy ticket</button>
+  <%= button_to cart_path(@user) do %>
+    <i type=“button” class=“btn btn-secondary”></i> Buy ticket
+  <% end %>
 </div>
 
 <div class="Glorious ">
@@ -29,5 +36,7 @@
   <h2> The barn </h2>
   <h2> Thursday 8:00 PM </h2>
   <h2> 300 SEK</h2>
-  <button type=“button” class=“btn btn-secondary”>Buy ticket</button>
+  <%= button_to cart_path(@user) do %>
+    <i type=“button” class=“btn btn-secondary”></i> Buy ticket
+  <% end %>
 </div>

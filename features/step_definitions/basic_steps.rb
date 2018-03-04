@@ -1,44 +1,48 @@
-Given("I visit the index page") do
+Given('I visit the index page') do
   visit root_path
 end
 
-Then("I should see {string}") do |content|
+Then('I should see {string}') do |content|
   expect(page).to have_content content
 end
 
-Then("I click the button {string}") do |element|
+Then('I click the button {string}') do |element|
   click_link_or_button element
 end
 
-Then("I should fill in {string} with {string}") do |query, song|
+Then('I should fill in {string} with {string}') do |query, song|
   fill_in query, with: song
 end
 
-Then("show me the page") do
+Then('show me the page') do
   save_and_open_page
 end
 
-Then("I should be redirected to {string} page") do |page_name|
+Then('I should be redirected to {string} page') do |page_name|
   expect(page.current_path).to eq page_path_from(page_name)
 end
 
 def page_path_from(page_name)
   case page_name.downcase
-  when "registration"
+  when 'registration'
     new_user_registration_path
   else
     root_path
   end
 end
 
-Given("I provide invalid credentials") do
+Given('I provide invalid credentials') do
   OmniAuth.config.mock_auth[:spotify] = :invalid_credentials
 end
 
-Then("I should be on {string} page") do |string|
+Then('I should be on {string} page') do |string|
   visit concert_tickets_path
 end
 
-Then("I click the {string} button") do |link|
-  find(".Overachievers", match: :first).click
+Then('I click the {string} button') do |link|
+  find('.Overachievers', match: :first).click
+end
+
+Then("I should be redirected to cart page") do
+  visit cart_path
 end
