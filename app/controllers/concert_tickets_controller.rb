@@ -1,5 +1,5 @@
 class ConcertTicketsController < ApplicationController
+  before_action :authenticate_user!, only: [:index]
     def index
-      redirect_to concert_tickets_path if user_signed_in?
     end
 end
