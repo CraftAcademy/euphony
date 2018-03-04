@@ -36,5 +36,9 @@ Given("I provide invalid credentials") do
 end
 
 Then("I should be on {string} page") do |string|
-  visit  concert_tickets_path
+  visit concert_tickets_path
+end
+
+Then("I click the {string} button") do |link|
+  find('.Overachievers', match: :first).click
 end
