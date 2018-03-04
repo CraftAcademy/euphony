@@ -36,3 +36,19 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   padding: 45px;
 }
+
+.navbar {
+  background-color: white ! important;
+}
+
+.nav-link {
+  color: black ! important;
+}
+
+.nav-link:hover {
+  color: rgba(255, 0, 0, 0.6) ! important;
+}
+
+.nav-item:active {
+  color: rgba(255, 0, 0, 0.6) ! important;
+}
