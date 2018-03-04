@@ -9,4 +9,3 @@ Feature: User can buy concert tickets
     Then I should be on "Ticket sales" page
     And I should see "Upcomming Concerts"
     Then I click the "Buy ticket" button
-    Then show me the page
