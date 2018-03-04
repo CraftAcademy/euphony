@@ -10,5 +10,4 @@ Feature: User can buy concert tickets
       Then I should be redirected to "Ticket sales" page
       And I should see "Upcomming Concerts"
       And I click "Buy ticket" 
-      Then show me the page
       Then I should be redirected to "cart" page

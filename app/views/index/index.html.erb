@@ -5,14 +5,17 @@
 <button type="button" class="btn btn-secondary">Mellow</button>
 <button type="button" class="btn btn-secondary">Sad</button>
 
-<%= form_with url: search_path do |form| %>
+<%= form_with url: search_path, local: true do |form| %>
   <%= form.label :query, 'Enter a song you like to listen to when you feel this way:' %>
   <%= form.text_field :query %>
   <%= form.submit value: 'Search' %>
 <% end %>
 
+
 <% if @recommendations %>
-  <% @recommendations.tracks.each do |track| %>
-    <iframe src="https://open.spotify.com/embed/track/<%= track.id %>" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <h2>Suggested tracks:</h2>
+  <%- @recommendations.each do |track| %>
+    <iframe src="<%= "https://open.spotify.com/embed?uri=spotify:track:#{track.id}" %>"
+            frameborder="0" allow="encrypted-media" allowtransparency="true"></iframe>
   <% end %>
 <% end %>

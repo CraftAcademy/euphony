@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'rspotify'
 gem 'devise'
 gem 'omniauth-spotify'
+gem 'rack-cors', require: 'rack/cors'
 
 
 group :development, :test do
@@ -24,7 +25,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  gem "chromedriver-helper"
+  gem 'chromedriver-helper'
   gem 'factory_bot_rails'
   gem 'pry-byebug'
   gem 'pry-rails'
