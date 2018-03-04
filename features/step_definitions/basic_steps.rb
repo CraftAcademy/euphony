@@ -35,11 +35,7 @@ Given("I provide invalid credentials") do
   OmniAuth.config.mock_auth[:spotify] = :invalid_credentials
 end
 
-<<<<<<< HEAD
 Then("I should be on {string} page") do |string|
-=======
-Then('I should be on {string} page') do |string|
->>>>>>> 3ebcb80... Corrected typos etc
   visit concert_tickets_path
 end
 
