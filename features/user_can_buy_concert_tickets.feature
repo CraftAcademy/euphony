@@ -7,7 +7,8 @@ Feature: User can buy concert tickets
   Scenario: User can buy tickets
       Given I am on the index page
       And I click the button "Concert tickets"
-      Then I should be on "Ticket sales" page
+      Then I should be redirected to "Ticket sales" page
       And I should see "Upcomming Concerts"
-      And I click the "Buy ticket" button
-      Then I should be redirected to cart page
+      And I click "Buy ticket" 
+      Then show me the page
+      Then I should be redirected to "cart" page
