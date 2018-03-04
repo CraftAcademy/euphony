@@ -35,10 +35,10 @@ Given('I provide invalid credentials') do
   OmniAuth.config.mock_auth[:spotify] = :invalid_credentials
 end
 
-Then('I should be on {string} page') do |_string|
+Then('I should be on {string} page') do |string|
   visit concert_tickets_path
 end
 
-Then('I click the {string} button') do |_link|
+Then("I click the {string} button") do |link|
   find('.Overachievers', match: :first).click
 end
