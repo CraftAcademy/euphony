@@ -14,7 +14,7 @@ Then("I should fill in {string} with {string}") do |query, song|
   fill_in query, with: song
 end
 
-Then("show me the page") do
+Then('show me the page') do
   save_and_open_page
 end
 
@@ -26,6 +26,10 @@ def page_path_from(page_name)
   case page_name.downcase
   when 'registration'
     new_user_registration_path
+  when 'cart'
+    cart_path
+  when 'ticket sales'
+    concert_tickets_path
   else
     root_path
   end
